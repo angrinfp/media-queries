@@ -1,0 +1,48 @@
+body {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.table {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.table-header,
+.table-body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+}
+
+.table-header {
+	color: white;
+	background: gray;
+}
+
+.col {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.table-header .col {
+	text-align: center;
+}
+
+.table-body .col {
+	text-align: right;
+}
+
+@media print {
+	.table-header {
+		background: white;
+		color: black;
+	}
+
+	.logo {
+		display: none;
+	}
+}
